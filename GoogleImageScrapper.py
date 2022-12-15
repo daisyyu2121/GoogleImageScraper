@@ -61,7 +61,8 @@ class GoogleImageScraper():
         self.webdriver_path = webdriver_path
         self.image_path = image_path
         # self.url = "https://www.google.com/search?q=%s&source=lnms&tbm=isch&sa=X&ved=2ahUKEwie44_AnqLpAhUhBWMBHUFGD90Q_AUoAXoECBUQAw&biw=1920&bih=947"%(search_key) # Searching by keyword
-        self.url = "https://www.google.com/search?hl=en-SG&tbs=simg:CAESmAIJPN_15ByxqerwajAILELCMpwgaOwo5CAQSFKE2gT-OMJAOtSatN9ERsyzFC78PGht_1ikShZ6PCQ6a88MgE38APW9L2iAFerzeGxTggBTAEDAsQjq7-CBoKCggIARIE0o3PGgwLEJ3twQkaqwEKGQoHbGVpc3VyZdqliPYDCgoIL20vMDRnM3IKJgoSbmF2aWdhdGlvbiBjaGFubmVs2qWI9gMMCgovbS8wY245cDAyCicKE21hcmluZSBhcmNoaXRlY3R1cmXapYj2AwwKCi9tLzAyODBmM18KJAoQbmF2aWdhdGlvbiBjYW5hbNqliPYDDAoKL20vMGNuOXAxMQoXCgViYXJnZdqliPYDCgoIL20vMDFidG4M&sxsrf=ALiCzsZchEwD4sOzSvSxdXZo0NEm2trZ-Q:1654564208185&q=leisure&tbm=isch&source=iu&ictx=1&vet=1&fir=s20go46GGTIFeM%252CTCrJrEtQ54UoUM%252C_%253B6JHjiKQtMbyfiM%252CHiidN4C9K1Mp8M%252C_%253BgflYOi8-hHJzjM%252CCKH9LIY0Y5sRIM%252C_%253BbK8QKedfVsrMEM%252CCnUtPjCOm4eNQM%252C_%253Bu369Z9Aij-NY2M%252CnqmTiYuhZSXipM%252C_%253B8oLRnitJ8fv4rM%252C9-ryFNCHoNl0oM%252C_%253B9CJC_OmFN9ppgM%252Ci5I5xK1uAyAdGM%252C_%253BG9JT2nqOa-tYbM%252CHUtPclSCY8RkfM%252C_%253BRvAHvVfGtCKjqM%252Cc-tpwjk-JEcGUM%252C_%253BD_G99e8hbwozLM%252CC5k6BUjPrvLWoM%252C_%253BjgA2TcZAR_g49M%252C02oZ3tYjywzWmM%252C_%253Bz5g9t5Nz07Kz7M%252CNhJRGORWGsaYmM%252C_%253BovTS6MZw9ftClM%252CtuHhR8NNv5cqfM%252C_%253BKdT9Ld7GemZxWM%252C5HvrmRxgS_hZeM%252C_%253Bty2MBVYOUAk8LM%252Croql3TtxpmSXQM%252C_%253B1oYrvVazcCvaoM%252CTxfFAssWRs4GzM%252C_%253BBAsAbCFW1QHxMM%252CwZJ9oE3NvWtNlM%252C_%253Bbl3YNfZClRnUMM%252CxC151u5NFpJEJM%252C_%253BqpJhApW8NOdryM%252CFyufiWK0p6hMvM%252C_%253BsTy2uMghOq30CM%252CHhHPj5e1CGhPQM%252C_&usg=AI4_-kQWxQ668wqxnZ4YGZtqHHmc7J6sdA&sa=X&ved=2ahUKEwi994v_k5r4AhVF7XMBHWf1A0kQ9QF6BAgKEAE&biw=1536&bih=713&dpr=2.5#imgrc=s20go46GGTIFeM" # Searching by url directly (searching by image on google and copy url of results page)
+        self.url = "https://www.google.com/search?q=handwriting&rlz=1C5CHFA_enUS727US727&sxsrf=ALiCzsbtLaFpW0Akz7O2wxYwTYS_u8qMsQ:1671082745829&source=lnms&tbm=isch&sa=X&ved=2ahUKEwi3_dGr9Pr7AhU-RjABHc6-DSYQ_AUoAXoECAEQAw&biw=1185&bih=675&dpr=2"
+        #self.url = "https://www.google.com/search?hl=en-SG&tbs=simg:CAESmAIJPN_15ByxqerwajAILELCMpwgaOwo5CAQSFKE2gT-OMJAOtSatN9ERsyzFC78PGht_1ikShZ6PCQ6a88MgE38APW9L2iAFerzeGxTggBTAEDAsQjq7-CBoKCggIARIE0o3PGgwLEJ3twQkaqwEKGQoHbGVpc3VyZdqliPYDCgoIL20vMDRnM3IKJgoSbmF2aWdhdGlvbiBjaGFubmVs2qWI9gMMCgovbS8wY245cDAyCicKE21hcmluZSBhcmNoaXRlY3R1cmXapYj2AwwKCi9tLzAyODBmM18KJAoQbmF2aWdhdGlvbiBjYW5hbNqliPYDDAoKL20vMGNuOXAxMQoXCgViYXJnZdqliPYDCgoIL20vMDFidG4M&sxsrf=ALiCzsZchEwD4sOzSvSxdXZo0NEm2trZ-Q:1654564208185&q=handwriting&tbm=isch&source=iu&ictx=1&vet=1&fir=s20go46GGTIFeM%252CTCrJrEtQ54UoUM%252C_%253B6JHjiKQtMbyfiM%252CHiidN4C9K1Mp8M%252C_%253BgflYOi8-hHJzjM%252CCKH9LIY0Y5sRIM%252C_%253BbK8QKedfVsrMEM%252CCnUtPjCOm4eNQM%252C_%253Bu369Z9Aij-NY2M%252CnqmTiYuhZSXipM%252C_%253B8oLRnitJ8fv4rM%252C9-ryFNCHoNl0oM%252C_%253B9CJC_OmFN9ppgM%252Ci5I5xK1uAyAdGM%252C_%253BG9JT2nqOa-tYbM%252CHUtPclSCY8RkfM%252C_%253BRvAHvVfGtCKjqM%252Cc-tpwjk-JEcGUM%252C_%253BD_G99e8hbwozLM%252CC5k6BUjPrvLWoM%252C_%253BjgA2TcZAR_g49M%252C02oZ3tYjywzWmM%252C_%253Bz5g9t5Nz07Kz7M%252CNhJRGORWGsaYmM%252C_%253BovTS6MZw9ftClM%252CtuHhR8NNv5cqfM%252C_%253BKdT9Ld7GemZxWM%252C5HvrmRxgS_hZeM%252C_%253Bty2MBVYOUAk8LM%252Croql3TtxpmSXQM%252C_%253B1oYrvVazcCvaoM%252CTxfFAssWRs4GzM%252C_%253BBAsAbCFW1QHxMM%252CwZJ9oE3NvWtNlM%252C_%253Bbl3YNfZClRnUMM%252CxC151u5NFpJEJM%252C_%253BqpJhApW8NOdryM%252CFyufiWK0p6hMvM%252C_%253BsTy2uMghOq30CM%252CHhHPj5e1CGhPQM%252C_&usg=AI4_-kQWxQ668wqxnZ4YGZtqHHmc7J6sdA&sa=X&ved=2ahUKEwi994v_k5r4AhVF7XMBHWf1A0kQ9QF6BAgKEAE&biw=1536&bih=713&dpr=2.5#imgrc=s20go46GGTIFeM" # Searching by url directly (searching by image on google and copy url of results page)
         self.headless=headless
         self.min_resolution = min_resolution
         self.max_resolution = max_resolution
@@ -84,11 +85,12 @@ class GoogleImageScraper():
         while self.number_of_images > count:
             try:
                 #find and click image
-                imgurl = self.driver.find_element_by_xpath('//*[@id="islrg"]/div[1]/div[%s]/a[1]/div[1]/img'%(str(indx))) # problem is in this line
+                imgurl = self.driver.find_element(By.XPATH, '//*[@id="islrg"]/div[1]/div[%s]/a[1]/div[1]/img'%(str(indx))) # problem is in this line
                 imgurl.click()
                 print("daisy: click successfully")
                 missed_count = 0 
             except Exception:
+                print("Error reason: ", Exception.__cause__)
                 print("[-] Unable to click this photo.")
                 missed_count = missed_count + 1
                 if (missed_count > 10):
@@ -98,7 +100,7 @@ class GoogleImageScraper():
             try:
                 #select image from the popup
                 time.sleep(1)
-                class_names = ["n3VNCb", "xxx", "ewighnwog"]
+                class_names = ["n3VNCb"]
                 images = [self.driver.find_elements(By.CLASS_NAME, class_name) for class_name in class_names if len(self.driver.find_elements(By.CLASS_NAME, class_name)) != 0 ][0]
                 
                 for image in images:
@@ -110,14 +112,18 @@ class GoogleImageScraper():
                         count +=1
                         break
             except Exception:
-                print("daisy: " + Exception.__cause__)
+                #print(Exception.__cause__)
                 print("[INFO] Unable to get link")   
                 
             try:
                 #scroll page to load next image
+                print("count: ", count)
+                print("self: ", self)
                 if(count%3==0):
                     self.driver.execute_script("window.scrollTo(0, "+str(indx*60)+");")
+                    print("haha0: ", self.driver.execute_script)
                 element = self.driver.find_element_by_class_name("mye4qd")
+                print("haha: ", element)
                 element.click()
                 print("[INFO] Loading more photos")
                 time.sleep(3)
