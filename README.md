@@ -9,9 +9,9 @@ A library to scrape images from websites like Google, Getty and many more in the
 
 ## Setup:
 1. Open cmd
-2. Clone the repository (or [download](https://github.com/JJLimmm/Google-Image-Scraper/archive/refs/heads/master.zip))
+2. Clone the repository (or [download](https://github.com/daisyyu2121/GoogleImageScraper/archive/refs/heads/main.zip))
     ```
-    git clone https://github.com/JJLimmm/Google-Image-Scraper
+    git clone https://github.com/daisyyu2121/GoogleImageScraper
     ```
 3. Install Dependencies
     ```
