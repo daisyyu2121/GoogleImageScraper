@@ -70,14 +70,3 @@ for search_key in search_keys:
 #Release resources    
 del image_scrapper
 
-```  
-## Development Roadmap:  
-[x] Add Scraping from Getty Images  
-[ ] Add scraping for shutterstock and bing (**_In-Progress_**)  
-[ ] Streamline all website scrapers into one script (Code Refactoring)  
-[ ] Support for other website browsers (Firefox, Edge)  
-[ ] Add in support for multiple image formats (e.g: jpg, png, jpeg) and reformat non-conventional image formats (webp, etc...)  
-
-
-=======
-
